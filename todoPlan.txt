@@ -1,0 +1,22 @@
+**modelNaming
+todoHeader --->  todoList
+
+**model structure
+// todoHeader
+todo_task { 
+    header: 'txt',
+    date: 'mongoose-date',
+    list: [ 
+        //todoList
+        {
+            todo_id: 'txt',
+            todo_title: 'txt'.
+            todo_date: 'date.now(),
+            todo_complete: 'boolean'
+        }
+    ]
+}
+
+**router path
+todo/:id/           ---> todoHeader
+todo/:id/list/:id   ---> todoList

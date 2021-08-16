@@ -4,7 +4,7 @@ const todoListCtrl = {
     getTodoList: async(req, res) => {
         try{
             const _todoId = req.params.todoheaderid
-            const dbTodo = await TodoModel.find({_id: _todoId})
+            const dbTodo = await TodoModel.find({_id: _todoId}).sort({createdAt: -1})
             res.json(dbTodo)
         }
         catch(err){
@@ -16,7 +16,7 @@ const todoListCtrl = {
             const _todoId = req.params.todoheaderid
             const {todo_id, todo_title, todo_completed} = req.body
             const dbTodo = await TodoModel.findOne({_id: _todoId})
-            dbTodo.list.push({todo_id: todo_id, todo_title: todo_title, todo_completed: todo_completed})
+            dbTodo.list.push({todo_id: todo_id, todo_title: todo_title, todo_completed: false})
             const create = await dbTodo.save()
             res.json(create)
         }

@@ -11,6 +11,7 @@ const todoHeaderCtrl = {
                     res.status(201).send(data)
                 }
             })
+            .sort({createdAt: -1})
         }
         catch(err){
             return res.status(500).json({msg: err.message}) 

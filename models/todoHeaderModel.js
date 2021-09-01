@@ -2,8 +2,7 @@ import mongoose from 'mongoose'
 
 const todoHeaderSchema = mongoose.Schema({
     header: {
-        type: String,
-        required: true
+        type: String
     },
     list: [{
         todo_id: {

@@ -12,7 +12,7 @@ This backend project uses the following technologies: npm, express, cor, dotenv,
 1. Clone the project
 2. Install the packages
 ```
-yarn add https://github.com/briankarlsayen/todo-task-backendend.git
+yarn add https://github.com/briankarlsayen/todo-task-backend.git
 ```
 3. Run the project
 ```
